@@ -6,11 +6,11 @@ st.sidebar.title("Herramientas")
 
 archivo = st.sidebar.file_uploader("Selecciona tu archivo a cargar")
 if archivo is not None:
-  sr.write("Su archivo fue cargado exitosamente")
+  st.write("Su archivo fue cargado exitosamente")
   if archivo.name.endswith(".csv"):
     datos = pd.read_csv(archivo)
   if archivo.name.endswith(".xls"):
     datos = pd.read_excel(archivo)
   st.write(datos)
 else:
-  sr.write("Cargue su archivo")
+  st.write("Cargue su archivo")
